@@ -1,8 +1,6 @@
-package test;
-
 public class WaterTrapping {
 
-///first solution with O(n^2)	
+///first solution with O(n^2)
 
 //	public int trap(int[] A){
 //		int i, j, k;
@@ -28,12 +26,12 @@ public class WaterTrapping {
 //					sum ++;
 //			}
 //		}
-//		
+//
 //		return sum;
 //	}
-//	
+//
 //	private int height(int[] A){
-//		
+//
 //		int max = 0;
 //		for(int i = 0; i < A.length; i ++){
 //			if(A[i] > max)
@@ -43,7 +41,7 @@ public class WaterTrapping {
 //	}
 
 //second solution with O(n)
-	
+
 	public int trap(int[] A){
 		if(A.length == 0)
 			return 0;
@@ -51,7 +49,7 @@ public class WaterTrapping {
 		int[] maxRight = new int[A.length];
 		int max = A[0];
 		for(int i = 1; i < A.length - 1; i ++){
-			maxLeft[i] = max; 
+			maxLeft[i] = max;
 			if(A[i] > max)
 				max = A[i];
 		}
@@ -63,10 +61,10 @@ public class WaterTrapping {
 		}
 		int sum = 0;
 		for(int i = 1; i < A.length - 1; i ++){
-			sum += Math.max(Math.min(maxLeft[i], maxRight[i]) - A[i], 0);				
+			sum += Math.max(Math.min(maxLeft[i], maxRight[i]) - A[i], 0);
 		}
-		
+
 		return sum;
 	}
-	
+
 }
