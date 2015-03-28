@@ -16,19 +16,13 @@ public class REMatching {
 //        	if(p.charAt(0) == '*')
 //        		return true;
         	if(p.charAt(0) == '.')
-        		return s.length() == 1;        	
-        	if(p.charAt(0) == s.charAt(0))
-        		return true;
-        	else
-        		return false;       	       	
+        		return s.length() == 1;
+			return p.charAt(0) == s.charAt(0);
         }
         else{
         	if(s.length() == 1)
         	{
-        		if((p.charAt(0) == '.' || p.charAt(0) == s.charAt(0)) && onlyContainStars(p.substring(1)) )
-        			return true;
-        		else
-        			return false;
+				return (p.charAt(0) == '.' || p.charAt(0) == s.charAt(0)) && onlyContainStars(p.substring(1));
         	}
         	else{
         		if((p.charAt(0) == '.' || p.charAt(0) == s.charAt(0)))
