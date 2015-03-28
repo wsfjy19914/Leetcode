@@ -8,27 +8,27 @@ public class MinimumWindow {
 		if(S.length() < T.length())
 			return "";
 		Map<Character, Integer> t = new HashMap<Character, Integer>();
-
+		
         for(int i = 0; i < T.length(); i ++)
         {
         	if(t.containsKey(T.charAt(i)))
-        	{
+        	{        		
         		t.put(T.charAt(i), t.get(T.charAt(i)) + 1);
         	}
         	else
         	{
         		t.put(T.charAt(i), 1);
-        	}
+        	}   
         }
-
+        
         HashMap<Character, Integer> s = new HashMap<Character, Integer>();
-
+        
         int count = 0;
         int start = 0;
         int end = 0;
         int minimum = Integer.MAX_VALUE;
         String subString = "";
-
+        
         for(end = 0; end < S.length(); end ++)
         {
         	char ec = S.charAt(end);
@@ -49,7 +49,7 @@ public class MinimumWindow {
         	}
         	else
         		continue;
-
+        	
         	if(count == T.length())
         	{
         		char sc = S.charAt(start);
@@ -70,8 +70,8 @@ public class MinimumWindow {
         	}
         }
         return subString;
-
+        
     }
 
-
+	
 }

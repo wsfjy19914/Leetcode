@@ -1,5 +1,3 @@
-package test;
-
 public class MergeSortedArrays {
 
 	public void merge(int A[], int m, int B[], int n) {
