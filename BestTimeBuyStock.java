@@ -8,21 +8,14 @@ public class BestTimeBuyStock {
                 return 0;
 
             int max = 0;
+            int min = Integer.MAX_VALUE;
 
-            int[] minSoFar = new int[prices.length];
-            minSoFar[0] = prices[0];
-
-            for(int i = 1; i < prices.length; i ++)
+            for(int i = 0; i < prices.length; i ++)
             {
-                if (prices[i] < minSoFar[i - 1])
-                    minSoFar[i] = prices[i];
-                else
-                    minSoFar[i] = minSoFar[i - 1];
-            }
+                if (prices[i] < min)
+                    min = prices[i];
 
-            for(int i = 1; i < prices.length; i ++)
-            {
-                int profit = prices[i] - minSoFar[i];
+                int profit = prices[i] - min;
                 if(profit > max)
                     max = profit;
             }
