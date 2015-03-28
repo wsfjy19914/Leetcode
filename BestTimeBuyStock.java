@@ -2,25 +2,23 @@
  * Created by fjy on 15/03/28.
  */
 public class BestTimeBuyStock {
-    public class Solution {
-        public int maxProfit(int[] prices) {
-            if (prices.length == 0 || prices.length == 1)
-                return 0;
+    public int maxProfit(int[] prices) {
+        if (prices.length == 0 || prices.length == 1)
+            return 0;
 
-            int max = 0;
-            int min = Integer.MAX_VALUE;
+        int max = 0;
+        int min = Integer.MAX_VALUE;
 
-            for(int i = 0; i < prices.length; i ++)
-            {
-                if (prices[i] < min)
-                    min = prices[i];
+        for(int i = 0; i < prices.length; i ++)
+        {
+            if (prices[i] < min)
+                min = prices[i];
 
-                int profit = prices[i] - min;
-                if(profit > max)
-                    max = profit;
-            }
-
-            return max;
+            int profit = prices[i] - min;
+            if(profit > max)
+                max = profit;
         }
+
+        return max;
     }
 }
