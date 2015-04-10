@@ -3,22 +3,22 @@
  * Date: 2015/3/4
  */
 
-import java.math.BigInteger;
+import java.util.Arrays;
 
 
 public class Main {
     public static void main(String[] args) throws Exception {
-    	
-    	
-    	StringToInteger s = new StringToInteger();
-    	
 
-    	
-    	System.out.println(s.atoi("    10522545459"));
-    	System.out.println(Long.MAX_VALUE);
-    	System.out.println(Integer.MIN_VALUE);
-    	
-    	
+        System.out.println("asdb");
+        int[] a = {1,2,3,4,5};
+		int[] b = Arrays.copyOfRange(a, 0, 2);
+
+        for(int i : a)
+            System.out.println(i);
+
+        for(int i : b)
+            System.out.println(i);
+
       
     }
     
